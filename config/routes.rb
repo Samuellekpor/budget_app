@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "groups#index"
-  resources :users
+  # resources :users
   resources :groups, only: [:index, :show, :new, :create, :destroy] do
     resources :activities, only: [:index, :show, :new, :create, :destroy]
   end
