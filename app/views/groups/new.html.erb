@@ -1,19 +1,21 @@
 <div class="entire-page">
   <div class="devise-class">
-    <div class="header-container">
+    <div class="header-container header-container2">
       <span class="nav-bar">
         <%= link_to groups_path do %>
           <i class="fas fa-chevron-left text-white"></i>
         <% end %>
       </span>
-      <h3 class="heading">CREATE GROUP</h3>
+      <h3 class="header">CREATE GROUP</h3>
     </div>
   </div>
   <div class="form-container">
     <%= form_with model: @group, method: :post, local: true do |f| %>
       <%= f.text_field :name, required: true, placeholder: "Name", autofocus: true, autocomplete: "name", class: "form-text" %>
       <%= f.text_field :icon, placeholder: "Icon link", autofocus: true, autocomplete: "icon",class: "form-text" %>
-      <%= f.submit "ADD GROUP", data: {disable_with: "Adding..."}, class: "button" %>
+      <div class="btn">
+        <%= f.submit "ADD GROUP", data: {disable_with: "Adding..."}, class: "button" %>
+      </div>
     <% end %>
   </div>
 </div>
