@@ -1,15 +1,84 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.entire-page {
+  background-color: #e7ebef;
+  height: 635px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #3778c2;
+  padding: 20px;
+}
+
+.header {
+  font-size: 30px;
+  color: white;
+}
+
+.nav-bar > a {
+  text-decoration: none;
+  color: white;
+}
+
+.text-center {
+  font-size: 35px;
+  text-align: center;
+}
+
+.group-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  margin: 15px;
+  padding: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #434b54;
+}
+
+img {
+  height: 40px;
+  width: 40px;
+}
+
+.group-title {
+  font-size: 22px;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.total-amount {
+  font-size: larger;
+  font-weight: 800;
+}
+
+.btn {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background-color: #5fb523;
+  width: 100%;
+  padding: 35px 0;
+}
+
+.button {
+  color: #fff;
+  text-decoration: none;
+  border: 1.5px #fff solid;
+  padding: 15px 95px;
+  border-radius: 5px;
+}
