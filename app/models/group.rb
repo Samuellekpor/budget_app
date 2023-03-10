@@ -3,5 +3,9 @@ class Group < ApplicationRecord
   validates :icon, presence: true
 
   has_and_belongs_to_many :activities, dependent: :destroy
-  belongs_to :author, class_name: 'User', foreign_key: :author_id
+  belongs_to :user
+
+  def total_amount
+    activities.sum(:amount)
+  end
 end
