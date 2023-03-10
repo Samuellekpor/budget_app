@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-  load_and_authorize_resource
+  # load_and_authorize_resource
 
   def new
     @activity = Activity.new

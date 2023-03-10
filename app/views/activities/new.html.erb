@@ -1,0 +1,26 @@
+<section>
+  <div class="devise-class">
+    <div class="header-container">
+      <span class="nav-bar">
+        <%= link_to groups_path do %>
+          <i class="fas fa-chevron-left text-white"></i>
+        <% end %>
+      </span>
+      <h3 class="header">CREATE ACTIVITY</h3>
+    </div>
+  </div>
+
+  <div class="form-container">
+  <%= form_with model: @activity, method: :post, local: true do |f| %>
+    <%= f.text_field :name, required: true, placeholder: "Name", autofocus: true, autocomplete: "name", class: "form-text" %>
+    <%= f.number_field :amount, required: true, placeholder: "Amount", autofocus: true, autocomplete: "Amount", step: "any", class: "form-text" %>
+
+    <div class="form-group">
+      <%= f.label :group %>
+      <%= f.collection_select(:group_ids, Group.all, :id, :name, { prompt: true }, { multiple: true, required: true })%>
+    </div>
+
+    <%= f.submit "ADD A NEW ACTIVITY", data: {disable_with: "Adding..."}, class: "button" %>
+    <% end %>
+  </div>
+</section>
