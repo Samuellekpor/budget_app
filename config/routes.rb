@@ -8,6 +8,11 @@ Rails.application.routes.draw do
   authenticated :user do
     root 'groups#index', as: :authenticated_root
   end
+
+  unauthenticated :user do
+    root to: 'splash#index'
+  end
+  
   resources :groups, only: [:index, :show, :new, :create]
   resources :activities, only: [:new, :create]
 end
