@@ -1,9 +1,9 @@
 class GroupsController < ApplicationController
-  def index;
+  def index
     @groups = current_user.groups
   end
 
-  def new;
+  def new
     @group = Group.new
   end
 

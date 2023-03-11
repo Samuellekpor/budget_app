@@ -50,6 +50,11 @@ strong {
   text-align: center;
 }
 
+li a {
+  text-decoration: none;
+  color: #434b54;
+}
+
 .nav-bar > a {
   text-decoration: none;
   color: white;
@@ -98,11 +103,6 @@ li {
   list-style: none;
 }
 
-li a {
-  text-decoration: none;
-  color: #434b54;
-}
-
 img {
   height: 40px;
   width: 40px;
@@ -119,7 +119,10 @@ img {
   font-weight: 800;
 }
 
-input[type="text"], input[type="number"], input[type="email"], input[type="password"] {
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
   width: 100%;
   height: 50px;
   box-sizing: border-box;
@@ -138,7 +141,7 @@ input[type="text"]:focus {
   border: 1.5px #fff solid;
   padding: 15px 95px;
   border-radius: 5px;
-  background-color: #5fb523
+  background-color: #5fb523;
 }
 
 .btn {

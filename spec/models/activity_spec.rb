@@ -26,6 +26,5 @@ RSpec.describe Activity, type: :model do
       activity.author = nil
       expect(activity).to_not be_valid
     end
-
   end
 end
