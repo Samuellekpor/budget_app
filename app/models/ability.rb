@@ -4,10 +4,9 @@ class Ability
   def initialize(user)
     return unless user.present?
 
-      can(:manage, Category, user:)
-      can(:manage, Product, user:)
-      can :read, Category
-      can :create, :all
-    end
+    can(:manage, Category, user:)
+    can(:manage, Product, user:)
+    can :read, Category
+    can :create, :all
   end
 end
