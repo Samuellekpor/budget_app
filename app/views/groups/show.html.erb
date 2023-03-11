@@ -10,10 +10,7 @@
         <h3 class="header">ACTIVITIES</h3>
       </div>
     </div>
-    <% if @activities.empty? %>
-      <p class="text-center">There are no activities yet!</p>
-    <% end %>
-    <div class="group-container">
+    <div class="group-container2">
       <div>
         <%= image_tag @group.icon, class: "img" %>
       </div>
@@ -26,15 +23,20 @@
         $<%= @group.total_amount %>
       </span>
     </div>
+    <% if @activities.empty? %>
+      <p class="text-center">There are no activities yet!</p>
+    <% end %>
     <ul>
       <% @activities.each do |activity| %>
         <li class="activity-container" >
           <div>
-            <%= activity.name %>
-          </div>
-          <div>
-            <i class="far fa-calendar-alt"></i>
-            <%= activity.created_at.strftime("%d %b %Y") %> at <%= activity.created_at.strftime("%r")%>
+            <div class="activity-title">
+              <%= activity.name %>
+            </div>
+            <div>
+              <i class="far fa-calendar-alt"></i>
+              <%= activity.created_at.strftime("%d %b %Y") %> at <%= activity.created_at.strftime("%r")%>
+            </div>
           </div>
           <div class="group-details">
             $<%= activity.amount %>

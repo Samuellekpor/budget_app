@@ -35,6 +35,10 @@ gem 'cancancan'
 
 gem 'font-awesome-rails'
 
+gem 'rails-controller-testing'
+
+gem 'rspec-rails'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
