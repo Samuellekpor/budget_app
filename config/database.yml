@@ -71,7 +71,7 @@ test:
 # Instead, provide the password or a full connection URL as an environment
 # variable when you boot the app. For example:
 #
-#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+#   DATABASE_URL="postgres://budget_app:@localhost/budget_app_production"
 #
 # If the connection URL is provided in the special DATABASE_URL environment
 # variable, Rails will automatically merge its configuration values on top of
@@ -87,5 +87,6 @@ test:
 production:
   <<: *default
   database: budget_app_production
-  username: budget_app
-  password: <%= ENV["BUDGET_APP_DATABASE_PASSWORD"] %>
+  username: sam
+  password: sam
+  url: postgres://sam:sam@localhost:5432/budget_app_production
