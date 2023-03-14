@@ -32,13 +32,21 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> ImproveLife is backend project
+> ImproveLife is backend project built with:
 
 <details>
 <summary>Database</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
+</details>
+
+<details>
+<summary>Ruby on Rails</summary>
+</details>
+
+<details>
+<summary>HTML/CSS</summary>
 </details>
 
 <!-- Features -->
