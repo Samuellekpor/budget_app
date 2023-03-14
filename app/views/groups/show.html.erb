@@ -1,0 +1,52 @@
+<div class="entire-page" >
+  <div>
+    <div class="devise-class">
+      <div class="header-container header-container2">
+        <span class="nav-bar">
+          <%= link_to groups_path do %>
+            <i class="fas fa-angle-left"></i>
+          <% end %>
+        </span>
+        <h3 class="header">ACTIVITIES</h3>
+      </div>
+    </div>
+    <div class="group-container2">
+      <div>
+        <%= image_tag @group.icon, class: "img" %>
+      </div>
+      <div>
+        <h2 class="group-title">
+          <%= @group.name %>
+        </h2>
+      </div>
+      <span class="group-details">
+        $<%= @group.total_amount %>
+      </span>
+    </div>
+    <% if @activities.empty? %>
+      <p class="text-center">There are no activities yet!</p>
+    <% end %>
+    <ul>
+      <% @activities.each do |activity| %>
+        <li class="activity-container" >
+          <div>
+            <div class="activity-title">
+              <%= activity.name %>
+            </div>
+            <div>
+              <i class="far fa-calendar-alt"></i>
+              <%= activity.created_at.strftime("%d %b %Y") %> at <%= activity.created_at.strftime("%r")%>
+            </div>
+          </div>
+          <div class="group-details">
+            $<%= activity.amount %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="btn">
+    <%= link_to "ADD A NEW ACTIVITY", new_activity_path(@group.id), class: "button" %>
+  </div>
+</div>
