@@ -1,0 +1,18 @@
+databases:
+  - name: budget_app
+    databaseName: budget_app_7wgd
+    user: budegt_app
+
+services:
+  - type: web
+    name: budegt_app
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: budget_app_7wgd
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
