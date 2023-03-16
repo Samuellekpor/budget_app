@@ -41,5 +41,3 @@ workers ENV.fetch("WEB_CONCURRENCY") { 4 }
 
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
-
-bind "tcp://0.0.0.0:#{ENV.fetch("PORT") { 3000 }}"
