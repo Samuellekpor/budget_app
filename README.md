@@ -65,7 +65,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [ImproveLife](https://budget-app-cnpg.onrender.com)
+- [ImproveLife](https://budget-app-x1ah.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
