@@ -1,0 +1,44 @@
+<div class="entire-page">
+  <div>
+    <div class="header-container">
+      <h3 class="header">GROUPS</h3>
+      <span class="nav-bar">
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+      </span>
+    </div>
+    <div>
+      <% if @groups.size < 1 %>
+        <p class="text-center" >There are no groups!!</p>
+      <% else %>
+        <ul>
+          <% @groups.each do |group| %>
+            <li>
+              <%= link_to group_path(group.id) do %>
+                <div class="group-container">
+                  <div>
+                    <%= image_tag group.icon, class: "img" %>
+                  </div>
+                  <div class="group-info">
+                    <h2 class="group-title">
+                      <%= group.name %>
+                    </h2>
+                    <p class="group-details">
+                      <%= group.created_at.strftime("%d %b %Y") %>
+                    </p>
+                  </div>
+                  <span class="total-amount">
+                    $<%= group.total_amount %>
+                  </span>
+                </div>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="btn">
+    <%= link_to "ADD A NEW GROUP", new_group_path, class: "button"%>
+  </div>
+</div>
