@@ -119,7 +119,7 @@ rspec
 
 👤 **Sammuel LEKPOR**
 
-- GitHub: [@gSamuellekpor](https://github.com/Samuellekpor)
+- GitHub: [@Samuellekpor](https://github.com/Samuellekpor)
 - Twitter: [@samuel_lekpor](https://twitter.com/samuel_lekpor)
 - LinkedIn: [sammuel_kepor](https://linkedin.com/in/sammuel-lekpor)
 
